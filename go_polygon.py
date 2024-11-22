@@ -142,7 +142,7 @@ date_time=pd.to_datetime(epoch_time,unit='ms').dt.strftime("%Y-%m-%d")
 aggsP_df['timestampP'] = date_time
 aggsP_df['closeP'] = aggsP_df['close']
 
-
+ws2.clear(start ='C4',end='J13')
 df_output=pd.concat([aggsAst_df[['timestamp','close']],aggsC_df[['timestampC','closeC']],aggsP_df[['timestampP','closeP']]],axis=1)
 
 print(df_output)
